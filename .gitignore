@@ -4,6 +4,7 @@ __pycache__/
 venv/
 node_modules/
 
-# Optional (exclude large files)
+# Optional (large files)
 aqi_data.db
+aqi_app.db
 AQI_2020_to_2025_October.csv
