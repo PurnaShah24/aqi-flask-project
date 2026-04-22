@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Login | AQI Analytics{% endblock %}
+
+{% block content %}
+<section class="card form-card">
+    <h2>Login</h2>
+    <form id="loginForm" method="POST" novalidate>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" required minlength="4">
+
+        <button class="btn primary" type="submit">Login</button>
+    </form>
+</section>
+{% endblock %}

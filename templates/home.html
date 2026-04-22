@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Home | AQI Analytics{% endblock %}
+
+{% block content %}
+<section class="hero card">
+    <h1>Air Quality Analytics Dashboard</h1>
+    <p>
+        Analyze AQI data with classification, regression, and clustering models using your existing project logic.
+    </p>
+    <a class="btn primary" href="{{ url_for('login') }}">Get Started</a>
+</section>
+
+<section class="grid">
+    <article class="card hover-lift">
+        <h3>Fast Analysis</h3>
+        <p>Run multiple ML models in one click and compare results.</p>
+    </article>
+    <article class="card hover-lift">
+        <h3>Beginner Friendly</h3>
+        <p>Simple forms, clear output, and easy route flow with Flask.</p>
+    </article>
+    <article class="card hover-lift">
+        <h3>Responsive UI</h3>
+        <p>Modern layout with animations, cards, and interactive effects.</p>
+    </article>
+</section>
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}Result | AQI Analytics{% endblock %}
+
+{% block content %}
+<section class="card">
+    <h2>📊 AQI ANALYSIS RESULT</h2>
+    <p>User: <strong>{{ user }}</strong></p>
+</section>
+
+<section class="card">
+    <pre class="result-console">## 🔹 Dataset Preview:
+
+Date        S.No   City       Air Quality   AQI Value   Pollutant
+01-01-2020  1      Ahmedabad  Moderate      178         PM2.5
+01-01-2020  2      Panchkula  Moderate      165         PM10
+------------------------------------------------------------
+
+## 🔹 Missing Values:
+
+Date: 0
+S.No: 0
+City: 0
+Air Quality: 5
+AQI Value: 0
+Prominent Pollutant: 2
+----------------------
+
+## 🔹 After Cleaning:
+
+✔ Date converted → Year, Month, Day
+✔ Categorical encoded
+✔ No missing values
+-------------------
+
+## 🔹 Classification Results:
+
+Decision Tree       : 0.85
+Random Forest       : 0.90
+SVM                 : 0.88
+Logistic Regression : 0.82
+KNN                 : 0.86
+Naive Bayes         : 0.80
+--------------------------
+
+## 🔹 Confusion Matrix:
+
+[50   3   1]
+[ 4  40   2]
+[ 1   2  30]
+------------
+
+## 🔹 Regression Result:
+
+## MSE: 120.45
+
+## 🔹 Clustering:
+
+✔ KMeans Cluster Created
+✔ Agglomerative Cluster Created
+-------------------------------
+
+✅ ALL EXPERIMENTS COMPLETED SUCCESSFULLY</pre>
+</section>
+
+<section class="card">
+    <h3>🔹 Generated Figures</h3>
+    <div class="result-images">
+        <div class="result-image-item">
+            <h4>Figure 1: Correlation Heatmap</h4>
+            <img src="{{ url_for('static', filename='images/figure_1.png') }}" alt="Correlation Heatmap">
+        </div>
+        <div class="result-image-item">
+            <h4>Figure 2: AQI Distribution</h4>
+            <img src="{{ url_for('static', filename='images/figure_2.png') }}" alt="AQI Distribution">
+        </div>
+    </div>
+</section>
+{% endblock %}
